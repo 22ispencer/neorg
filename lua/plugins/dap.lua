@@ -46,7 +46,7 @@ return {
 		opts = {},
 		keys = {
 			{
-				"<leader>dt",
+				"<Leader>dt",
 				function()
 					require("dapui").toggle()
 				end,

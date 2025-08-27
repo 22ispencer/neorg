@@ -12,7 +12,7 @@ return {
 	},
 	keys = {
 		{
-			"<leader>ld",
+			"<Leader>ld",
 			function()
 				require("neogen").generate()
 			end,

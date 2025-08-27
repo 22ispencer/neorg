@@ -9,6 +9,6 @@ return {
 		},
 	},
 	keys = {
-		{ "<leader>g", "<cmd>Neogit<cr>", desc = "neo[g]it" },
+		{ "<Leader>g", "<cmd>Neogit<cr>", desc = "neo[g]it" },
 	},
 }

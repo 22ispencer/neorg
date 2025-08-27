@@ -26,4 +26,10 @@ require("lazy").setup({
 	install = { colorscheme = { "catppuccin-mocha" } },
 	-- automatically check for plugin updates
 	checker = { enabled = true },
+
+	dev = {
+		path = "~/projects/",
+		patterns = { "22ispencer" },
+		fallback = true,
+	},
 })

@@ -43,7 +43,7 @@ return {
 		extra.setup()
 		local files = require("mini.files")
 		files.setup()
-		vim.keymap.set("n", "<leader>e", files.open, { desc = "file [e]xplorer" })
+		vim.keymap.set("n", "<Leader>e", files.open, { desc = "file [e]xplorer" })
 		-- local jump = require("mini.jump")
 		-- jump.setup()
 		local misc = require("mini.misc")
@@ -51,13 +51,13 @@ return {
 		local pick = require("mini.pick")
 		pick.setup()
 		vim.ui.select = pick.ui_select
-		vim.keymap.set("n", "<leader>ff", pick.builtin.files, { desc = "[f]iles" })
-		vim.keymap.set("n", "<leader>fb", pick.builtin.buffers, { desc = "[b]uffers" })
-		vim.keymap.set("n", "<leader>fh", pick.builtin.help, { desc = "[h]elp" })
-		vim.keymap.set("n", "<leader>fg", pick.builtin.grep_live, { desc = "[h]elp" })
+		vim.keymap.set("n", "<Leader>ff", pick.builtin.files, { desc = "[f]iles" })
+		vim.keymap.set("n", "<Leader>fb", pick.builtin.buffers, { desc = "[b]uffers" })
+		vim.keymap.set("n", "<Leader>fh", pick.builtin.help, { desc = "[h]elp" })
+		vim.keymap.set("n", "<Leader>fg", pick.builtin.grep_live, { desc = "[h]elp" })
 		local trailspace = require("mini.trailspace")
 		trailspace.setup()
-		vim.keymap.set("n", "<leader>tt", trailspace.trim, { desc = "[trim]" })
+		vim.keymap.set("n", "<Leader>tt", trailspace.trim, { desc = "[trim]" })
 		if not vim.g.vscode then
 			local snippets = require("mini.snippets")
 			snippets.setup({
@@ -113,9 +113,9 @@ return {
 					clue.gen_clues.registers(),
 					clue.gen_clues.windows(),
 					clue.gen_clues.z(),
-					{ mode = "n", keys = "<leader>f", desc = "+[f]ind" },
-					{ mode = "n", keys = "<leader>l", desc = "+[l]sp" },
-					{ mode = "n", keys = "<leader>d", desc = "+[d]ebug" },
+					{ mode = "n", keys = "<Leader>f", desc = "+[f]ind" },
+					{ mode = "n", keys = "<Leader>l", desc = "+[l]sp" },
+					{ mode = "n", keys = "<Leader>d", desc = "+[d]ebug" },
 				},
 			})
 
