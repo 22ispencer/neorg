@@ -1,6 +1,10 @@
 return {
 	"echasnovski/mini.nvim",
-	dependencies = { "MaximilianLloyd/ascii.nvim", "MunifTanjim/nui.nvim" },
+	dependencies = {
+		"MaximilianLloyd/ascii.nvim",
+		"MunifTanjim/nui.nvim",
+		"rafamadriz/friendly-snippets",
+	},
 	config = function()
 		local basics = require("mini.basics")
 		basics.setup({
@@ -55,10 +59,12 @@ return {
 		trailspace.setup()
 		vim.keymap.set("n", "<leader>tt", trailspace.trim, { desc = "[trim]" })
 		if not vim.g.vscode then
-			local completion = require("mini.completion")
-			completion.setup()
 			local snippets = require("mini.snippets")
-			snippets.setup()
+			snippets.setup({
+				snippets = {
+					snippets.gen_loader.from_lang(),
+				},
+			})
 
 			local clue = require("mini.clue")
 			clue.setup({
