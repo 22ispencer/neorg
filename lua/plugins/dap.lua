@@ -5,37 +5,37 @@ return {
 			{
 				"<F5>",
 				function()
-					dap.continue()
+					require("dap").continue()
 				end,
 			},
 			{
 				"<S-F5>",
 				function()
-					dap.terminate()
+					require("dap").terminate()
 				end,
 			},
 			{
 				"<F9>",
 				function()
-					dap.toggle_breakpoint()
+					require("dap").toggle_breakpoint()
 				end,
 			},
 			{
 				"<F10>",
 				function()
-					dap.step_over()
+					require("dap").step_over()
 				end,
 			},
 			{
 				"<F11>",
 				function()
-					dap.step_into()
+					require("dap").step_into()
 				end,
 			},
 			{
 				"<S-F11>",
 				function()
-					dap.step_out()
+					require("dap").step_out()
 				end,
 			},
 		},
