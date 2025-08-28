@@ -6,6 +6,11 @@ return {
 		lazy = false,
 		opts = {},
 		config = function(_, opts)
+			require("nvim-treesitter.configs").setup({
+				indent = {
+					enable = true,
+				},
+			})
 			vim.opt.foldmethod = "expr"
 			vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 			vim.opt.foldlevel = 99
@@ -20,7 +25,6 @@ return {
 				},
 				callback = function()
 					vim.treesitter.start()
-					vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 				end,
 			})
 		end,
