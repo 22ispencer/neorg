@@ -43,7 +43,25 @@ return {
 	{
 		"rcarriga/nvim-dap-ui",
 		dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
-		opts = {},
+		opts = {
+			layouts = { ---@type dapui.Config.layout[]
+				{
+					elements = {
+						{ id = "scopes", size = 0.75 },
+						{ id = "watches", size = 0.25 },
+					},
+					position = "left",
+					size = 40,
+				},
+				{
+					elements = {
+						{ id = "repl", size = 1 },
+					},
+					position = "bottom",
+					size = 10,
+				},
+			},
+		},
 		keys = {
 			{
 				"<Leader>dt",
