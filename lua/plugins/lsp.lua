@@ -13,11 +13,17 @@ return {
 		vim.keymap.set("n", "gd", function()
 			vim.lsp.buf.definition()
 		end, { desc = "goto definition (lsp)" })
+		-- Lua
 		vim.lsp.enable("lua_ls")
+		-- Python
 		vim.lsp.enable("pyright")
 		vim.lsp.enable("basedpyright")
 		vim.lsp.enable("ruff")
+		-- Go
 		vim.lsp.enable("gopls")
+		-- JavaScript
 		vim.lsp.enable("ts_ls")
+		-- Rust
+		vim.lsp.enable("rust_analyzer")
 	end,
 }
