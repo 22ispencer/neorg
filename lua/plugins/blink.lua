@@ -26,7 +26,15 @@ return {
 		completion = { documentation = { auto_show = false } },
 		snippets = { preset = "mini_snippets" },
 		sources = {
-			default = { "lsp", "path", "snippets", "buffer" },
+			default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+			providers = {
+				lazydev = {
+					name = "LazyDev",
+					module = "lazydev.integrations.blink",
+					-- make lazydev completions top priority (see `:h blink.cmp`)
+					score_offset = 100,
+				},
+			},
 		},
 		fuzzy = { implementation = "prefer_rust_with_warning" },
 	},
