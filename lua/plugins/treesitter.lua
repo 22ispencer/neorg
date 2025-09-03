@@ -22,6 +22,8 @@ return {
 					"javascriptreact",
 					"typescript",
 					"typescriptreact",
+					"ocaml",
+					"fennel",
 				},
 				callback = function()
 					vim.treesitter.start()

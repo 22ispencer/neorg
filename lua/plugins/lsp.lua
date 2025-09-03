@@ -25,5 +25,7 @@ return {
 		vim.lsp.enable("ts_ls")
 		-- Rust
 		vim.lsp.enable("rust_analyzer")
+		-- OCaml
+		vim.lsp.enable("ocamllsp")
 	end,
 }
