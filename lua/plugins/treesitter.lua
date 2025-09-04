@@ -4,6 +4,7 @@ return {
 		build = ":TSUpdate",
 		dependencies = { "OXY2DEV/markview.nvim" },
 		lazy = false,
+		enabled = not vim.g.vscode,
 		opts = {},
 		config = function(_, opts)
 			require("nvim-treesitter.configs").setup({

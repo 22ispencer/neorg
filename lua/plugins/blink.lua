@@ -2,6 +2,7 @@ return {
 	"saghen/blink.cmp",
 	dependencies = { "rafamadriz/friendly-snippets", "echasnovski/mini.snippets" },
 	version = "1.*",
+	enabled = not vim.g.vscode,
 	opts = {
 		keymap = {
 			preset = "none",

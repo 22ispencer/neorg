@@ -1,5 +1,6 @@
 return {
 	"NeogitOrg/neogit",
+	enabled = not vim.g.vscode,
 	dependencies = { "nvim-lua/plenary.nvim", "sindrets/diffview.nvim", "echasnovski/mini.pick" },
 	opts = {
 		view = {

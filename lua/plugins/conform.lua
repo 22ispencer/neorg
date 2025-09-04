@@ -1,5 +1,6 @@
 return {
 	"stevearc/conform.nvim",
+	enabled = not vim.g.vscode,
 	config = function()
 		require("conform").setup({
 			formatters_by_ft = {

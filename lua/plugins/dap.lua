@@ -1,6 +1,7 @@
 return {
 	{
 		"mfussenegger/nvim-dap",
+		enabled = not vim.g.vscode,
 		keys = {
 			{
 				"<F5>",
@@ -43,6 +44,7 @@ return {
 	{
 		"rcarriga/nvim-dap-ui",
 		dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+		enabled = not vim.g.vscode,
 		opts = {
 			layouts = { ---@type dapui.Config.layout[]
 				{
@@ -74,6 +76,7 @@ return {
 	},
 	{
 		"mfussenegger/nvim-dap-python",
+		enabled = not vim.g.vscode,
 		config = function()
 			require("dap-python").setup("uv")
 		end,

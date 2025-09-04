@@ -1,5 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
+	enabled = not vim.g.vscode,
 	config = function()
 		vim.keymap.set("n", "<Leader>lr", function()
 			vim.lsp.buf.rename()
