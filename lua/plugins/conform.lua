@@ -13,6 +13,7 @@ return {
 				typescript = { "prettier" },
 				typescriptreact = { "prettier" },
 				yaml = { "yamlfix" },
+				swift = { "swift" },
 			},
 			format_on_save = function(bufnr)
 				-- Disable with a global or buffer-local variable

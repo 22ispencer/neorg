@@ -28,5 +28,9 @@ return {
 		vim.lsp.enable("rust_analyzer")
 		-- OCaml
 		vim.lsp.enable("ocamllsp")
+		-- Spell checking
+		vim.lsp.enable("harper_ls")
+		-- Swift
+		vim.lsp.enable("sourcekit")
 	end,
 }
