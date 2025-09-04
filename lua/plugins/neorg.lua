@@ -8,7 +8,7 @@ return {
 		load = {
 			["core.defaults"] = {},
 			["core.concealer"] = {},
-			["core.latex.renderer"] = {},
+			["core.latex.renderer"] = (vim.loop.os_uname().sysname ~= "Windows_NT" and {}) or nil,
 		},
 	},
 }
