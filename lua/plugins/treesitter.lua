@@ -7,27 +7,20 @@ return {
 		enabled = not vim.g.vscode,
 		opts = {},
 		config = function(_, opts)
-			require("nvim-treesitter.configs").setup({
-				indent = {
-					enable = true,
-				},
-			})
-			vim.opt.foldmethod = "expr"
-			vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-			vim.opt.foldlevel = 99
 			vim.api.nvim_create_autocmd("FileType", {
-				pattern = {
-					"python",
-					"go",
-					"javascript",
-					"javascriptreact",
-					"typescript",
-					"typescriptreact",
-					"ocaml",
-					"fennel",
-				},
-				callback = function()
-					vim.treesitter.start()
+				callback = function(args)
+					local filetype = args.match
+					local lang = vim.treesitter.language.get_lang(filetype)
+					if not lang then
+						return
+					end
+					if vim.treesitter.language.add(lang) then
+						vim.wo.foldmethod = "expr"
+						vim.wo.foldlevel = 99
+						vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+						vim.bo.indentexpr = "nvim_treesitter#indent()"
+						vim.treesitter.start()
+					end
 				end,
 			})
 		end,
