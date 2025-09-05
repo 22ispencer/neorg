@@ -1,21 +1,25 @@
-vim.o.number = true
-vim.o.relativenumber = true
+vim.opt.number = true
+vim.opt.relativenumber = true
 
-vim.o.hlsearch = true
-vim.o.incsearch = true
-vim.o.ignorecase = true
-vim.o.smartcase = true
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
-vim.o.signcolumn = "yes"
+vim.opt.signcolumn = "yes"
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-vim.o.mouse = ""
+vim.opt.mouse = ""
 
-vim.o.splitright = true
-vim.o.splitbelow = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
-vim.o.scrolloff = 5
+vim.opt.scrolloff = 5
 
-vim.o.wrap = false
+vim.opt.wrap = false
+
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
